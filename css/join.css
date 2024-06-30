@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar */
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .links li {
+    list-style: none;
+}
+
+.navbar .links a,
+.navbar .dropdown_menu a {
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.navbar .links a:hover {
+    color: #bcdfa6;
+}
+
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.navbar .toggle_btn {
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* DROPDOWN MENU */
+.navbar .dropdown_menu {
+    z-index: 1;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: #c0def1;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.navbar .dropdown_menu.open {
+    height: 150px;
+}
+
+.navbar .dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.navbar .dropdown_menu a:hover {
+    color: white;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+    .navbar .links {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+/* Feedback */
+.feedback-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.title {
+    font-size: 35px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.background-image {
+    background-image: url('../img/feedback.jpg');
+    /* Freepik(2023). Flat Illustrationn of Landscape, www.freepik.com/free-vector/flat-illustration-landscape_19380933.htm?query=nature%20illustration%20background#from_view=detail_alsolike. [Accesed: 1/82023] */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+/* Adjustments for positioning */
+.feedback-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 91vh;
+}
+
+.button-container {
+    text-align: left;
+}
+
+/* Adjustments for coloring */
+.btn-primary {
+    background-color: #a8d5e2;
+}

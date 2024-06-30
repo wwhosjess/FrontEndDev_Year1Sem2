@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap');
+
+/* Navbar */
+* {
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .links li {
+    list-style: none;
+}
+
+.navbar .links a,
+.navbar .dropdown_menu a {
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.navbar .links a:hover {
+    color: #bcdfa6;
+}
+
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.navbar .toggle_btn {
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* DROPDOWN MENU */
+.navbar .dropdown_menu {
+    z-index: 1;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: #c0def1;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.navbar .dropdown_menu.open {
+    height: 150px;
+}
+
+.navbar .dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.navbar .dropdown_menu a:hover {
+    color: white;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 992px) {
+
+    .navbar .links {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+/* Section 1: About Us */
+
+/* Style the section background */
+.about-section {
+    padding: 20px;
+}
+
+.bg-light-main {
+    border-radius: 25px;
+    background-color: rgba(210, 243, 214, 0.8);
+    /* Customize the transparency here */
+
+}
+
+/* Style the image within the section */
+.about-image img {
+    width: 100%;
+    height: auto;
+    margin-top: -170px;
+}
+
+/* Center the content and add some spacing */
+.about-content {
+    text-align: left;
+    padding: 20px;
+    font-size: 18px;
+    font-family: 'Playfair Display', serif;
+}
+
+.about-main {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Section 2: Our Mission and Goals */
+
+.container {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.rounded-circle-custom {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.rounded-circle-custom img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Make the image cover the entire circle */
+}
+
+.bg-light-custom {
+    background-color: #e8f1f2;
+    opacity: 0.8;
+    border-radius: 50%;
+}
+
+.text-right,
+.text-left {
+    font-size: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+.font-green-bold {
+    font-weight: bold;
+    color: #083e0e;
+}
+
+/*Section 3: Our Latest Work with SP */
+.item {
+    display: flex;
+    align-items: center;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Customize carousel arrow colors */
+.carousel-control-prev-icon {
+    filter: invert(80%);
+    /* Change the percentage to adjust the color intensity */
+}
+
+.carousel-control-next-icon {
+    filter: invert(80%);
+    /* Change the percentage to adjust the color intensity */
+}
+
+/* Change arrow color on hover */
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    filter: invert(60%);
+    /* Change the percentage to adjust the color intensity on hover */
+}
+
+/* Section 4: Our Achievements */
+
+.achievement {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    padding: 20px 0;
+}
+
+.achievement-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    max-height: 80vh;
+    /* Set a maximum height for scrolling */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.dark-image {
+    filter: brightness(60%);
+}
+
+.counter {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.border-bottom {
+    width: 57px;
+    margin: 30px auto 0;
+    border-color: #adcce9;
+}
+
+.data-row {
+    margin-top: 50px;
+}
+
+/* Media queries */
+@media (max-width: 576px) {
+    .counter {
+        font-size: 16px;
+    }
+}
